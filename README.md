@@ -99,6 +99,10 @@ Follow these steps to get the project up and running on your local machine.
 
 As the only user, you can manage your blog posts through Django's admin interface. Log in with the admin credentials and navigate to the blog posts section to create, edit, or delete posts.
 
+## Video
+
+[![Watch the video](https://img.youtube.com/vi/AMWuTu9Sdww/maxresdefault.jpg)](https://youtu.be/AMWuTu9Sdww)
+
 ## Screenshots
 
 ![Homepage](asset/240912_22h13m03s_screenshot.png)
