@@ -1,0 +1,31 @@
+
+{% extends "blog/index.html" %}
+{% block title %} Blog Posts {% endblock %}
+{% block content %}
+<div class="container mx-auto p-6 text-gray-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {% for post in posts %}
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden w-full h-full">
+    <a href="{% url 'post' post.id %}" class="block">
+      <!-- Square image -->
+      <div class="w-full h-64">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Card content -->
+      <div class="p-4">
+        <h1 class="text-xl font-bold text-blue-900 bg-blue-100 p-3 rounded-md shadow-md hover:bg-blue-200 dark:text-blue-300 dark:bg-blue-900 dark:hover:bg-blue-700">
+          {{ post.title }}
+        </h1>
+        <small class="text-gray-600 dark:text-gray-400 block mt-2">
+          <strong>- {{ post.author }}</strong>
+        </small>
+        <p class="text-gray-700 mt-2 dark:text-gray-300">
+          {{ post.content|truncatewords:30 }}
+        </p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
