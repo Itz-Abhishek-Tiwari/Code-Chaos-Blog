@@ -18,3 +18,5 @@ def category_detail(request, id):
     return render(
         request, "blog/category_detail.html", {"category": category, "posts": posts}
     )
+
+
